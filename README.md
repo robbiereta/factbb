@@ -1,2 +1,2 @@
-# factbb
+# fact
 Created with CodeSandbox

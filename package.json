@@ -1,0 +1,55 @@
+{
+  "name": "factu-devv3-test2",
+  "version": "1.0.0",
+  "description": "",
+  "keywords": [],
+  "main": "src/index.js",
+  "dependencies": {
+    "@chec/commerce.js": "^2.7.1",
+    "@material-ui/core": "4.12.2",
+    "@material-ui/data-grid": "4.0.0-alpha.34",
+    "@material-ui/icons": "4.11.2",
+    "@popperjs/core": "2.9.2",
+    "axios": "^0.21.1",
+    "bootstrap": "^5.0.2",
+    "doppler": "1.0.0",
+    "easyinvoice": "1.0.144",
+    "facturapi": "2.5.1",
+    "jquery": "3.6.0",
+    "jsonata": "^1.8.4",
+    "material-ui": "0.20.2",
+    "mdb-react-ui-kit": "1.2.0",
+    "moment": "2.29.1",
+    "mysql": "2.18.1",
+    "mysql-connection-pool-manager": "1.5.9",
+    "mysql2": "2.2.5",
+    "mysqljs": "0.0.2-security",
+    "nedb": "1.8.0",
+    "nice-invoice": "1.0.8",
+    "react": "16.8.3",
+    "react-dom": "16.8.3",
+    "react-hook-form": "7.0.0",
+    "react-router-dom": "5.2.0",
+    "react-scripts": "2.1.8",
+    "react-select": "4.3.1",
+    "react-table": "7.7.0",
+    "receipt": "1.4.0",
+    "secretjs": "0.16.1",
+    "styled-components": "5.3.0"
+  },
+  "devDependencies": {
+    "typescript": "3.3.3"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
+}

@@ -1,0 +1,22 @@
+div#ticket {
+  width: 100%;
+}
+button#recibo {
+  display: none;
+}
+body {
+  font-family: Roboto, Helvetica, Arial, sans-serif;
+}
+button.ripple.ripple-surface.btn.btn-primary {
+  margin-top: 10em;
+}
+#factura {
+  width: 100%;
+  margin-left: -13em;
+}
+div#factura {
+  margin-left: 0em;
+}
+h5#url {
+  margin-left: -13em;
+}
