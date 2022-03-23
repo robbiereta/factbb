@@ -10,6 +10,7 @@ import Fact from "./form_fact";
 import Recibo from "./recibos";
 import Global from "./global";
 import Total from "./total";
+import Precios from "./precios";
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
 
@@ -82,6 +83,7 @@ export default function NavTabs() {
           <LinkTab label="Punto de venta" href="/drafts" {...a11yProps(0)} />
           <LinkTab label="Recibos" href="/trash" {...a11yProps(1)} />
           <LinkTab label="Global" href="/spam" {...a11yProps(2)} />
+          <LinkTab label="Precios" href="/spam" {...a11yProps(3)} />
         </Tabs>
       </AppBar>
       <TabPanel value={value} index={0}>
@@ -92,6 +94,9 @@ export default function NavTabs() {
       </TabPanel>
       <TabPanel value={value} index={2}>
         <Global />
+      </TabPanel>
+      <TabPanel value={value} index={3}>
+        <Precios />
       </TabPanel>
     </div>
   );

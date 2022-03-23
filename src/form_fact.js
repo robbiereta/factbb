@@ -23,18 +23,18 @@ var tickets = [];
 var $ = jquery;
 
 var live = "sk_live_NpE3r9Rl4KadW4JQNm5WM17oXQVng6xZ";
-
+var test = "sk_test_VN9W1bQmxaKq2e4j6x81ry870rkwYEXe:";
 for (let index = 0; index < tickets.length; index++) {
   const element = tickets[index];
 }
 var fecha = moment().format("MMMM Do YYYY, h:mm:ss a");
 const Facturapi = require("facturapi");
 const receipt = require("receipt");
-const facturapi = new Facturapi(live);
-
-
+const facturapi = new Facturapi(test);
+var total;
 var url;
-
+var result;
+var cambio;
 async function recibo() {
   const receipt2 = await facturapi.receipts.create({
     payment_form: Facturapi.PaymentForm.EFECTIVO,
@@ -45,6 +45,11 @@ async function recibo() {
   console.log(url);
 
   $("#factura").append(url);
+  result = prompt("¿con cuanto pago?");
+  cambio = result - total;
+  alert("el cambio es de :" + cambio);
+  jquery("#pago").text(result);
+  jquery("#cambio").text(cambio);
   $("#recibo").click();
 }
 
@@ -75,9 +80,13 @@ var ticket = (
               <tr class="tabletitle" id="totalTicket">
                 <td class="Rate">
                   <h5>Total</h5>
+                  <h5>Pago:</h5>
+                  <h5>Cambio:</h5>
                 </td>
                 <td class="payment">
                   <h5 id="total">0</h5>
+                  <h5 id="pago">0</h5>
+                  <h5 id="cambio">0</h5>
                 </td>
               </tr>
             </tbody>
@@ -168,8 +177,6 @@ function print(ticket) {
 
   document.body.innerHTML = originalContents;
 }
-var total;
-
 
 async function jsonCambio(data) {
   var imp = data.precio;
@@ -182,7 +189,7 @@ async function jsonCambio(data) {
   var clave;
   var unidad;
   if (data.descripcion === "reparacion") {
-    clave = "78181cantidad500";
+    clave = "78181500";
     unidad = "E48";
   } else {
     clave = "25174700";
